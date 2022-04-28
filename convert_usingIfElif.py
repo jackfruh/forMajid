@@ -21,6 +21,20 @@ def main():
             if part == "ToRu":
                 ThisFileNeedsAllTranslations = False
                 convertToRussian(file)
+
+            if part == "ToCs":
+                ThisFileNeedsAllTranslations = False
+                convertToCzech(file)
+            
+            if part == "ToDe":
+                ThisFileNeedsAllTranslations = False
+                convertToGerman(file)
+            
+
+            if part == "ToNl":
+                ThisFileNeedsAllTranslations = False
+                convertToDutch(file)
+            
             
             elif part == "ToEs":
                 convertToSpanish(file)
@@ -37,7 +51,22 @@ def convertToRussian(file):
     #conversion logic here
     #create file.stem.mp3 in output directory
 
-    
+ def convertToCzech(file):
+    print("converting " + file.stem + " to Czech")
+    #conversion logic here
+    #create file.stem.mp3 in output directory
+
+
+def convertToGerman(file):
+    print("converting " + file.stem + " to German")
+    #conversion logic here
+    #create file.stem.mp3 in output directory
+
+def convertToDutch(file):
+    print("converting " + file.stem + " to Dutch")
+    #conversion logic here
+    #create file.stem.mp3 in output directory
+ 
 def convertToSpanish(file):
     print("converting " + file.stem + " to Spanish")
     #conversion logic here
@@ -46,6 +75,9 @@ def convertToSpanish(file):
 def convertToAllLanguages(file):
     print("well look here, we have a file that needs to be converted to ALL languages!")
     convertToRussian(file)
+    convertToCzech(file)
+    convertToGerman(file)
+    convertToDutch(file)
     convertToSpanish(file)
 
 main() #begin program by calling main function
